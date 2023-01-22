@@ -1,1 +1,5 @@
-# Hello VitePress
+### Hello VitePress
+
+```ts
+console.log('hello world')
+```
