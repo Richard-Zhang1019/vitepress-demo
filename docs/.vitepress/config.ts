@@ -4,14 +4,16 @@ import { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 export default defineConfig({
   title: 'lucky-design',
   description: 'Just playing around',
-  lang: 'en-US',
+  lang: 'cn-ZH',
+  base: '/',
   themeConfig: {
     // 网站header部分标题
     siteTitle: 'lucky-design',
     // 顶部tab-bar
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' }
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Components', link: '/components/' },
     ] as NavItem[],
     // slider-bar
     sidebar: [
