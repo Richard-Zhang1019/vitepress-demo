@@ -59,7 +59,7 @@ export default defineConfig({
     algolia: {
       appId: 'Z7DZ7S5F34',
       apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'lucky-design',
+      indexName: 'Lucky-design',
     },
   },
   lastUpdated: true,
