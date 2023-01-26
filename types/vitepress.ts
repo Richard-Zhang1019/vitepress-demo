@@ -1,4 +1,4 @@
-export type NavItemWithLink = {
+export interface NavItemWithLink {
   text: string
   link: string
   activeMatch?: string
