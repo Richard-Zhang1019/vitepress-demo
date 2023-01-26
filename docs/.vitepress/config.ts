@@ -6,7 +6,6 @@ export default defineConfig({
   description: 'Just playing around',
   lang: 'zh-CN',
   appearance: 'dark',
-  base: '/',
   head: [
     ['link', { rel: 'icon', href: '/public/icon.ico' }],
   ],
