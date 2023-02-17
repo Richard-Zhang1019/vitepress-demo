@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 
 export default defineConfig({
   title: 'lucky-design',
@@ -19,7 +18,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Components', link: '/components/' },
-    ] as NavItem[],
+    ],
     // slider-bar
     sidebar: [
       {
@@ -38,7 +37,7 @@ export default defineConfig({
           { text: 'icon', link: '/icon' },
         ],
       },
-    ] as Sidebar,
+    ],
     outlineTitle: 'In hac page',
     // 社交账号链接
     socialLinks: [
@@ -46,7 +45,7 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/ByteDanceYouthTrainCamp/lucky-design',
       },
-    ] as SocialLink[],
+    ],
     // footer
     footer: {
       message: 'Released under the MIT License.',
