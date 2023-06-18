@@ -1,5 +1,0 @@
-# Component overview
-
-- button
-
-- icon

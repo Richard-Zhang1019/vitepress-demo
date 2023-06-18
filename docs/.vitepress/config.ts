@@ -1,69 +1,89 @@
 import { defineConfig } from 'vitepress'
+import {
+  containerPreview,
+  componentPreview
+} from '@vitepress-demo-preview/plugin'
+
+import locales from './locales'
 
 export default defineConfig({
-  title: 'lucky-design',
-  description: 'Just playing around',
-  lang: 'zh-CN',
+  title: 'Docs',
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+
+  // 默认主题
   appearance: 'dark',
-  base: '/',
-  head: [
-    ['link', { rel: 'icon', href: '/icon.ico' }],
-  ],
+
+  // // i18n
+  locales: {
+    root: locales.zh
+  },
+
+  // 从URL中删除尾随的.html
+  cleanUrls: true,
+
+  // 显示更新时间
+  lastUpdated: true,
+
+  markdown: {
+    theme: 'material-theme-palenight',
+    lineNumbers: true,
+    config: md => {
+      md.use(componentPreview)
+      md.use(containerPreview)
+    }
+  },
+
   themeConfig: {
-    logo: '/icon.png',
+    // 大纲
+    outline: 'deep',
+
+    logo: {
+      dark: '/ayu-light.png',
+      light: '/ayu-dark.png'
+    },
+
     // 网站header部分标题
-    siteTitle: 'lucky-design',
-    // 顶部tab-bar
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Components', link: '/components/' },
-    ],
-    // slider-bar
-    sidebar: [
-      {
-        text: 'Guide',
-        collapsible: true,
-        items: [
-          { text: 'about', link: '/about' },
-          { text: 'profile', link: '/profile' },
-        ],
-      },
-      {
-        text: 'Components',
-        collapsible: true,
-        items: [
-          { text: 'button', link: '/button' },
-          { text: 'icon', link: '/icon' },
-        ],
-      },
-    ],
-    outlineTitle: 'In hac page',
+    siteTitle: 'Docs',
+
     // 社交账号链接
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ByteDanceYouthTrainCamp/lucky-design',
+        link: 'https://github.com/Richard-Zhang1019'
       },
+      {
+        icon: 'twitter',
+        link: 'https://twitter.com/RichardZhang_'
+      }
     ],
-    // footer
+
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-present Lucky-Design',
+      copyright: 'Copyright © 2023-present'
     },
-    editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: 'Edit this page on GitHub',
-    },
-    algolia: {
-      appId: 'Z7DZ7S5F34',
-      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'Lucky-design',
-    },
-  },
-  lastUpdated: true,
-  markdown: {
-    theme: 'material-darker',
-    lineNumbers: true,
-  },
+
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 })
