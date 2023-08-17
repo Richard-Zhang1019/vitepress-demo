@@ -9,6 +9,8 @@
     "preview": "vitepress preview ."
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "react": "^18.2.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
@@ -17,7 +19,7 @@
     "@vitepress-demo-preview/plugin": "^1.1.12",
     "typescript": "^4.9.3",
     "vite": "^4.0.0",
-    "vitepress": "1.0.0-beta.2",
+    "vitepress": "1.0.0-rc.4",
     "vue-tsc": "^1.0.11"
   }
 }

@@ -8,3 +8,6 @@
 
 <preview path="./A.vue" title="title" description="component description content"></preview>
 
+import Home from './Home.tsx'
+
+<Home />

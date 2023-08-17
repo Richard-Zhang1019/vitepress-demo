@@ -9,8 +9,8 @@ hero:
   text: Vue-based Component Library
   tagline: Simple, powerful, pretty, and performant
   image:
-    src: /icon.png
-    alt: lucky-design
+    src: /
+    alt: 
   actions:
     - theme: brand
       text: Get Started

@@ -25,7 +25,7 @@ export default defineConfig({
   lastUpdated: true,
 
   markdown: {
-    theme: 'material-theme-palenight',
+    theme: 'one-dark-pro',
     lineNumbers: true,
     config: md => {
       md.use(componentPreview)
@@ -36,11 +36,6 @@ export default defineConfig({
   themeConfig: {
     // 大纲
     outline: 'deep',
-
-    logo: {
-      dark: '/ayu-light.png',
-      light: '/ayu-dark.png'
-    },
 
     // 网站header部分标题
     siteTitle: 'Docs',
